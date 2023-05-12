@@ -3,6 +3,7 @@ import {
     useLoaderData,
     useFetcher,
 } from "react-router-dom";
+
 import { getContact, updateContact } from "../contacts";
 
 export async function action({ request, params }) {
@@ -97,6 +98,7 @@ export default function Contact() {
 function Favorite({ contact }) {
     const fetcher = useFetcher();
     // yes, this is a `let` for later
+
     let favorite = contact.favorite;
     if (fetcher.formData) {
         favorite = fetcher.formData.get("favorite") === "true";

@@ -57,7 +57,6 @@ const router = createBrowserRouter([
             action: destroyAction,
           },
         ],
-
       },
     ],
   },
